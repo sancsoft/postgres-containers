@@ -1,0 +1,9 @@
+name: Weekly Rebuild
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-and-push.yml
