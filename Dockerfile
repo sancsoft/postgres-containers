@@ -13,4 +13,8 @@ RUN apt update && \
 
 COPY postgresql.conf /etc/postgresql/postgresql.conf
 
+RUN usermod -u 26 postgres
+
+USER 26
+
 CMD ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
